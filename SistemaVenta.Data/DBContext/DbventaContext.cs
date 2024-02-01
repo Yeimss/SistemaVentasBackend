@@ -32,7 +32,7 @@ public partial class DbventaContext : DbContext
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
-    public virtual DbSet<Ventum> Venta { get; set; }
+    public virtual DbSet<Venta> Venta { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
 
@@ -208,7 +208,7 @@ public partial class DbventaContext : DbContext
                 .HasConstraintName("FK__Usuario__idRol__403A8C7D");
         });
 
-        modelBuilder.Entity<Ventum>(entity =>
+        modelBuilder.Entity<Venta>(entity =>
         {
             entity.HasKey(e => e.IdVenta).HasName("PK__Venta__077D5614AB77CCD5");
 
